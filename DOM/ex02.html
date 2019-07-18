@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Execicio 2 - Eventos de DOM</title>
+    <style>
+        div#area {
+            font: normal 20pt Arial;
+            background: pink;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="area"> 
+        Interaja 
+    </div>
+
+    <script>
+    
+        var area = document.querySelector('#area')
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout', sair)
+        
+        function clicar(){
+        area.innerHTML = 'clicou!'
+        }
+
+        function entrar(){
+            area.innerHTML = 'entrou';
+            area.style.background = 'yellow';
+        }
+
+        function sair(){
+            area.innerHTML = 'saiu';
+            area.style.background = 'blue';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Somando os valores</h1>
+    <input type="number" name="txtn1" id="txtn1">
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" name="getSoma" id='getSoma'>
+    <div id="resultado"></div>
+
+    <script>
+    var getSoma = document.querySelector('#getSoma')
+    getSoma.addEventListener('click', somar)
+
+    function somar(){
+        var tn1 = document.querySelector('#txtn1')
+        var tn2 = document.querySelector('#txtn2')
+        var resultado = document.querySelector('#resultado')
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        var soma = n1 + n2;
+        resultado.innerHTML = `A soma de ${n1} e ${n2} é igual a ${soma}`
+    }
+    </script>
+</body>
+
+</html>
